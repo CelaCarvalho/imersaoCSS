@@ -1,0 +1,29 @@
+body {
+    background-image:url(https://news.miami.edu/_assets/images-stories/2019/11/ficms-940.jpg);
+    background-size:auto 1000px;
+    font-family: Arial;
+  }
+  .menu {
+    background-color:white;
+  }
+  .menu ul {
+    display:flex;
+    justify-content:space-around;
+  }
+  .menu li {
+    list-style:none;
+  }
+  a {
+        text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .site-subtitle,
+  .site-title {
+    text-align:right;
+    
+  }
+  .site-subtitle{
+     font-style:italic;
+  }
