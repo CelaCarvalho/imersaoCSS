@@ -7,10 +7,13 @@
 }
 
 body {
-    background-color: rgba(137, 43, 226, 0.466);
-    background-size:auto 500px;
+    background: url(https://cdn131.picsart.com/308565358263201.jpg?type=webp&to=min&r=640);
+    background-size:300px;
     font-family: Arial;
     font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    height: 100vh;
+    
   }
 
   /*se a tela tiver pelo menos 400px*/
@@ -21,7 +24,7 @@ body {
   }
   @media(min-width:600px) {
     body {
-      font:18px;
+      font:16px;
     }
   }
   header {
@@ -31,11 +34,11 @@ body {
     align-items: center;
   }
   .menu {
-    background-color: none;
+    background-color: whitesmoke;
     position: fixed;
     width: 100vw;
     top: 0;
-  }
+ }
   .menu ul {
     display:flex;
     justify-content:space-around;
@@ -48,80 +51,208 @@ body {
     display: block;
     padding: 10px 10px;
     font-size: 20px;
+    transition: background-color 1s, color 1s;
+  }
+  .menu a:hover{
+    background-color: black;
+    color: whitesmoke;
   }
   a {
-        text-decoration: none;
+    text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
   }
+  .titulo {
+    transform: scale(.2) translateY(50vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
+  }
+  @keyframes animacaoTitulo {
+   
+    100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    }
+  }
+
   .site-subtitle,
   .site-title {
-    text-align: center;
-     font-size: 3em;
+   text: center;
+   
   }
+  
+ .site-title {
+  font-size: 6em;
+  font-family: 'Italianno', cursive;
+ }
   .site-subtitle {
      font-style:italic;
-    
+     font-family: 'Roboto', sans-serif;
+     font-size: 2em;
   }
   .img-portfolio {
     height: 100px;
     width: 100px;
     border-radius: 50px;
   }
-  section h3 {
-  margin: 30px;
+  h3 {
   font-size: 3em;
-  border: 4px currentColor;
-  padding: 100px;
   text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  background-color: rgba(255, 192, 203, 0.699);
+}
+ .grid-portifolio {
+  display: grid;
+  text-align: center;
+  font-size: 13px;
+  grid-template-columns: repeat(2,50%); 
 }
 .img-portfolio-pv {
   margin: 30px;
-  font-size:3em;
-  background-color: rgba(245, 245, 245, 0.199);
-  border: 4px currentColor;
-  padding: 100px;
-  text-align: center;
-  text-decoration: underline;
+    font-size: 1.3em;
+    background-color:white;  
+    border: 1px solid black;
+    padding: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Merienda', cursive;
+    border-radius: 30px;
 }
-.img-portfolio-mo {
+.img-portfolio-jo {
   margin: 30px;
-  font-size:3em;
-  background-color: rgba(245, 245, 245, 0.199);
-  border: 4px currentColor;
-  padding: 100px;
-  text-align: center;
-  text-decoration: underline;
+    font-size: 1.3em;
+    background-color: white;
+    border: 1px solid black;
+    padding: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Merienda', cursive;
+    border-radius: 30px;
 }
 .img-portfolio-va {
   margin: 30px;
-  font-size:3em;
-  background-color: rgba(245, 245, 245, 0.199);
-  border: 4px currentColor;
-  padding: 100px;
-  text-align: center;
-  text-decoration: underline;
+    font-size: 1.3em;
+    background-color: white;
+    border: 1px solid black;
+    padding: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Merienda', cursive;
+    border-radius: 30px;
 } 
 .img-portfolio-le {
   margin: 30px;
-  font-size:3em;
-  background-color: rgba(245, 245, 245, 0.199);
-  border: 4px currentColor;
-  padding: 100px;
-  text-align: center;
-  text-decoration: underline;
+    font-size: 1.3em;
+    background-color: white;
+    border: 1px solid black;
+    padding: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Merienda', cursive;
+    border-radius: 30px;
 } 
-h4 {
-  margin: 30px;
-  font-size: 3em;
-  border: 4px currentColor;
-  padding: 100px;
-  text-align: center;
-}
+/*.portfolio .grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 500px 500px;
+}*/
+
 .grid-icons {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
   text-align: center;
-  font-size: medium;
+  font-size: 20px;
+  grid-template-columns: repeat(2,50%);
+  
+}
+.contato a {
+  color: black;
+  font-size: 4em;
+  transition: text-shadow 10ms;
+}
+.contato a:active,
+.contato a:hover {
+  text-shadow: 3px 3px 2px rgb(75, 67, 67);
+}
+.img-foto {
+  height: 36em;
+  width: 27em;
+  padding: 20px;
+}
+.sobre p {
+  color: black;
+  text-indent: 1.4em;
+  margin-bottom: -0.6em;
+  text-align: justify;
+  font-size: 23px;
+  padding: 1em;
+  font-style:italic;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sobre,
+.contato, .portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+.sobre-grid {
+  background-color: white;
+  height: 34em;
+  display: grid;
+  text-align: center;
+  font-size: 13px;
+  grid-template-columns: repeat(2,50%);
+}
+
+figure .img-foto{
+  display: block;
+  margin-block-start: -1.5em;
+}
+
+.contato .formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-weight: 700;
+}
+.formulario input {
+  height: 35px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.8em;
+  color: #666;
+  font-weight: 700;
+}
+textarea {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark-color(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textarea;
+  background-color: -internal-light-dark-color(white, black);
+  -webkit-rtl-ordering: logical;
+  flex-direction: column;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(169, 169, 169);
+  border-image: initial;
+  padding: 2px;
 }

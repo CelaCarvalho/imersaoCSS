@@ -6,27 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marcela Carvalho</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Mono&family=Italianno&family=Merienda:wght@400;700&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/45da3814b7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
     <nav class="menu">
       <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Documentos</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Documentos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-    <div>
-      <h1 class="site-title">Marcela Carvalho</h1>
+    <div class="titulo" id="titulo">
+      <h1 class="site-title">Marcela Albino de Carvalho</h1>
       <h2 class="site-subtitle">Professora de Química</h2>
     </div>
      
   </header>
-  <section>
+  <section class="sobre" id="sobre">
+    <h3>Sobre</h3>
+  <div class=sobre-grid>
+    <figure classe="foto">
+       <img class="img-foto" src="./img/WhatsApp Image 2020-05-16 at 20.48.13.jpeg " alt="Marcela Carvalho">
+   </figure>
+      <div class="texto" id="texto">
+        <p>Sou professora de química para o ensino médio desde 2010. Já trabalhei em diversas escolas e pré-vestibulares. Hoje leciono na escola de referência Ginásio Pernambucano - Aurora, Recife, PE.</p>
+        <p>Este site tem como objetivo fornecer material de apoio para o vestibular.</p>
+      </div>
+  </div> 
+    
+  </section>
+  <section class="portfolio" id="portfolio"> 
     
     <h3>Documentos</h3>
-    
+  <div class="grid-portifolio">
     <div>
      <figure class="img-portfolio-pv">
       <img class="img-portfolio" src="./img/images.png" alt="Provas de vestibular">
@@ -34,9 +50,9 @@
      </figure>
     </div>
     <div>
-     <figure class="img-portfolio-mo">
-      <img class="img-portfolio" src="./img/istockphoto-824666650-1024x1024.jpg" alt=">Mobile">
-      <figcaption>Mobile</figcaption>
+     <figure class="img-portfolio-jo">
+      <img class="img-portfolio" src="./img/istockphoto-824666650-1024x1024.jpg" alt=">Jogos">
+      <figcaption>Jogos</figcaption>
      </figure>
     </div>
     <div>
@@ -51,22 +67,36 @@
       <figcaption>Listas de exercícios</figcaption>
      </figure>
     </div>
+  </div>
   </section>
-  <section class="contato">
-    <h4>Contato</h4>
+  
+  <section class="contato" id="contato">
+    <h3>Contato</h3>
     <div class="grid-icons">
-      <a target="_blank" href="https://github.com/CelaCarvalho">
-        Github
+      <div>  <a target="_blank" href="https://github.com/CelaCarvalho">
+        <i class="fab fa-github-alt"></i>
       </a>
       <a target="_blank" href="https://twitter.com/mariecure1">
-        twitter
+        <i class="fab fa-twitter"></i>
       </a>
-      <a target="_blank" href="https://linkedin.com/in/marcela-albino-55316892/">
-        linkedin
+      <a target="_blank" href="https://linkedin.com/in/marcela-albino/">
+        <i class="fab fa-linkedin-in"></i>
       </a>
-      <a href="mailto:cela_albino@hotmail.com">
-        email
-      </a>
+      <a target = "_blank"href="mailto:cela_albino@hotmail.com">
+        <i class="far fa-envelope"></i>
+      </a >
+      <a target = "_blank"href="https://www.instagram.com/celaalbino">
+        <i class="fab fa-instagram"></i> </a>
+      </div>
+      <form class="formulario" action>
+        <label for>Nome</label>
+        <input type="text">
+        <label for>Email</label>
+        <input type="text">
+        <label for>Mensagem</label>
+        <textarea type="textarea" maxlength="500" rows="6" cols="30"></textarea>
+        <input type="submit" value="enviar">
+      </form>
     </div>
   </section>
 </body>
