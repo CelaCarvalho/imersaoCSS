@@ -3,30 +3,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
     background: url(https://cdn131.picsart.com/308565358263201.jpg?type=webp&to=min&r=640);
-    background-size:300px;
+    background-size:auto 300px;
     font-family: Arial;
     font-size: 10px;
     font-family: 'DM Mono', monospace;
     height: 100vh;
-    
   }
 
-  /*se a tela tiver pelo menos 400px*/
+  /*se a tela tiver pelo menos 400px vai carregar estes estilos*/
+
   @media(min-width:400px) {
     body{
-      font-size: 12px;
+      font-size: 14px;
     }
   }
+
+  /* breakpoint */
   @media(min-width:600px) {
     body {
-      font:16px;
+      background-attachment: fixed;
+      background-size: cover;
+      font-size: 18px;
     }
   }
+
+  /* breakpoint */
+@media (min-width: 1200px) {
+  body {
+   
+    font-size: 20px;
+  }
+}
+
   header {
     height: 104vh;
     display: flex;
@@ -38,6 +50,7 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
  }
   .menu ul {
     display:flex;
@@ -49,210 +62,183 @@ body {
   .menu a {
     color: black;
     display: block;
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 20px;
     transition: background-color 1s, color 1s;
   }
+  .menu a:active,
   .menu a:hover{
     background-color: black;
     color: whitesmoke;
   }
+
   a {
     text-decoration: none;
   }
+
   a:hover {
     text-decoration: underline;
   }
+
   .titulo {
-    transform: scale(.2) translateY(50vh);
+    transform: scale(0.2) translateY(50vh);
     opacity: 0;
-    animation: linear 2s animacaoTitulo forwards;
+    animation: 1s ease 500ms animacaoTitulo forwards;
   }
+
   @keyframes animacaoTitulo {
    
-    100% {
-    transform: scale(1) translateY(0);
-    opacity: 1;
+    from {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1) translateY(0);
+      opacity: 1;
     }
   }
 
   .site-subtitle,
   .site-title {
    text: center;
-   
   }
   
  .site-title {
-  font-size: 6em;
-  font-family: 'Italianno', cursive;
+    font-size: 4em;
+    font-family: 'Italianno', cursive;
  }
-  .site-subtitle {
-     font-style:italic;
-     font-family: 'Roboto', sans-serif;
-     font-size: 2em;
-  }
-  .img-portfolio {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-  }
-  h3 {
-  font-size: 3em;
-  text-align: center;
-  font-family: 'Architects Daughter', cursive;
-  background-color: rgba(255, 192, 203, 0.699);
-}
- .grid-portifolio {
-  display: grid;
-  text-align: center;
-  font-size: 13px;
-  grid-template-columns: repeat(2,50%); 
-}
-.img-portfolio-pv {
-  margin: 30px;
-    font-size: 1.3em;
-    background-color:white;  
-    border: 1px solid black;
-    padding: 50px;
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Merienda', cursive;
-    border-radius: 30px;
-}
-.img-portfolio-jo {
-  margin: 30px;
-    font-size: 1.3em;
-    background-color: white;
-    border: 1px solid black;
-    padding: 50px;
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Merienda', cursive;
-    border-radius: 30px;
-}
-.img-portfolio-va {
-  margin: 30px;
-    font-size: 1.3em;
-    background-color: white;
-    border: 1px solid black;
-    padding: 50px;
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Merienda', cursive;
-    border-radius: 30px;
-} 
-.img-portfolio-le {
-  margin: 30px;
-    font-size: 1.3em;
-    background-color: white;
-    border: 1px solid black;
-    padding: 50px;
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Merienda', cursive;
-    border-radius: 30px;
-} 
-/*.portfolio .grid {
-  display: grid;
-  gap: 1em;
-  grid-template-columns: 500px 500px;
-}*/
 
-.grid-icons {
-  display: grid;
-  text-align: center;
-  font-size: 20px;
-  grid-template-columns: repeat(2,50%);
+  .site-subtitle {
+    font-style:italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+  }
+
+  .sobre,
+  .contato, 
+  .portfolio {
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  @media (min-width:1200px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+    }
+  }
+
+  .sobre h2,
+  .contato h2,
+  .portfolio h2 { 
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    background-color: rgba(255, 192, 203, 0.699);
+    margin-bottom: 1.5em;
+  }
+
+  .sobre p {
+    color: black;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;    
+  }
+
+  .sobre a {
+    text-decoration: underline;
+  }
   
-}
-.contato a {
+  .sobre a:hover {
+    background-color: cyan;
+    text-decoration: none;
+    color: magenta;
+  }
+
+  .sobre .avatar {
+    margin-left: 2em;
+  }
+  
+    
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+  .flip-card {
+    height: 180px;
+    perspective: 1000px;
+  }
+  
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+  
+  .card-front, 
+  .card-back {
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+  }
+  
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .img-portfolio {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 500ms;
+  }
+
+.contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
   color: black;
   font-size: 4em;
-  transition: text-shadow 10ms;
+  transition:  10ms;
 }
 .contato a:active,
 .contato a:hover {
+  text-decoration: none;
   text-shadow: 3px 3px 2px rgb(75, 67, 67);
 }
-.img-foto {
-  height: 36em;
-  width: 27em;
-  padding: 20px;
-}
-.sobre p {
-  color: black;
-  text-indent: 1.4em;
-  margin-bottom: -0.6em;
-  text-align: justify;
-  font-size: 23px;
-  padding: 1em;
-  font-style:italic;
-  font-family: 'Roboto', sans-serif;
-}
 
-.sobre,
-.contato, .portfolio {
-  padding: 2em;
-  min-height: 100vh;
-}
-.sobre-grid {
-  background-color: white;
-  height: 34em;
-  display: grid;
-  text-align: center;
-  font-size: 13px;
-  grid-template-columns: repeat(2,50%);
-}
-
-figure .img-foto{
-  display: block;
-  margin-block-start: -1.5em;
-}
-
-.contato .formulario {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  font-family: 'Roboto', sans-serif;
-  color: #666;
-  font-weight: 700;
-}
-.formulario input {
-  height: 35px;
-  max-width: 500px;
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  padding: 5px;
-  font-family: 'Source Code Pro', monospace;
-  font-size: 0.8em;
-  color: #666;
-  font-weight: 700;
-}
-textarea {
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark-color(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  -webkit-appearance: textarea;
-  background-color: -internal-light-dark-color(white, black);
-  -webkit-rtl-ordering: logical;
-  flex-direction: column;
-  resize: auto;
-  cursor: text;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  margin: 0em;
-  font: 400 13.3333px Arial;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(169, 169, 169);
-  border-image: initial;
-  padding: 2px;
-}
